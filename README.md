@@ -2,6 +2,8 @@
 
 A python script to extract individual tables from a MySQL dump file.
 
+```
+
 usage: pymysqlextract.py [-h] [--tables table [table ...]] [--exclude]
                          mysqldumpfile
 
@@ -17,3 +19,5 @@ optional arguments:
                         include all tables)
   --exclude, -x         If specified, the list of tables will be treated as an
                         include list, rather than an exclude list
+
+```
