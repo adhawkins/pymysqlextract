@@ -16,12 +16,12 @@ def ProcessTable(Table, Exclude, Tables):
 
 parser = argparse.ArgumentParser(description='Extract some tables from a MySQL database dump file into individual files')
 parser.add_argument('--tables', '-t', metavar='table', nargs='+', help='Tables to include or exclude (if none specified, will include all tables)')
-parser.add_argument('sql', help='The SQL file to be used as input')
+parser.add_argument('mysqldumpfile', help='The MySQL dump file to be used as input')
 parser.add_argument('--exclude', '-x', action='store_true', help='If specified, the list of tables will be treated as an include list, rather than an exclude list')
 
 args = parser.parse_args()
 
-SQLFile = args.sql
+SQLFile = args.mysqldumpfile
 Exclude = args.exclude
 Tables = args.tables
 
